@@ -5,32 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BuildGhost</title>
   <style>
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.1;
+      }
+    }
+
     body {
       background: #000;
       color: #00ffcc;
       font-family: monospace;
       text-align: center;
-      padding: 5rem 2rem;
+      padding: 4rem 2rem;
     }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      margin: 0 auto 2rem;
+      animation: flicker 2.5s infinite;
+    }
+
     h1 {
-      font-size: 3rem;
-      animation: glitch 1s infinite;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      animation: flicker 2.5s infinite;
     }
+
     p {
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
+      font-size: 1rem;
       color: #ccc;
-    }
-    @keyframes glitch {
-      0% { text-shadow: 2px 0 red; }
-      25% { text-shadow: -2px 0 cyan; }
-      50% { text-shadow: 2px 0 lime; }
-      75% { text-shadow: -2px 0 magenta; }
-      100% { text-shadow: 2px 0 red; }
     }
   </style>
 </head>
 <body>
+  <img src="https://raw.githubusercontent.com/ghostwriterxx/ghostwriterxx.github.io/main/logo.svg" alt="BuildGhost Logo" class="logo" />
   <h1>👻 BuildGhost</h1>
   <p>Summoning something powerful...<br>Stay haunted.</p>
 </body>
